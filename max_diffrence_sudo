@@ -1,0 +1,28 @@
+FUNCTION maximize_sublist_difference(nums):
+
+    sorted_nums = sorted(nums)
+
+    sublist_A = []
+    sublist_B = []
+    n = array length sorted_nums
+
+
+    FOR i= 0 TO n / 2
+        sublist_A += sorted_nums[i]
+    END FOR
+    FOR i= n / 2 TO n
+        sublist_B += sorted_nums[i]
+    END FOR
+
+
+    difference = abs(sum(sublist_A) - sum(sublist_B))
+
+    RETURN sublist_A, sublist_B, difference
+
+
+
+nums = [5, 8, 2, 10, 3, 6]
+sublist_A, sublist_B, difference = maximize_sublist_difference(nums)
+print("Sublist A:", sublist_A)
+print("Sublist B:", sublist_B)
+print("Difference:", difference)

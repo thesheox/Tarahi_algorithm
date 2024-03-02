@@ -1,0 +1,29 @@
+FUNCTION minimize_sublist_difference(nums):
+    n = array length nums
+    sorted_nums = reversed(sorted(nums))
+
+    sublist_A = []
+    sublist_B = []
+
+    FOR num=0 TO n:
+
+        IF sum(sublist_A) <= sum(sublist_B)
+            sublist_A += num
+        END IF
+        ELSE:
+            sublist_B += num
+
+    END FOR
+
+
+    difference = abs(sum(sublist_A) - sum(sublist_B))
+
+    return sublist_A, sublist_B, difference
+
+
+
+nums = [5, 8, 2, 10, 3, 6]
+sublist_A, sublist_B, difference = minimize_sublist_difference(nums)
+print("Sublist A:", sublist_A)
+print("Sublist B:", sublist_B)
+print("Difference:", difference)

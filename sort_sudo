@@ -1,0 +1,33 @@
+FUNCTION sort_on(arr, k):
+
+    n = array length arr
+    int_range = k * n + 1
+
+        count = []
+    FOR i=0 TO int_range
+        count.append(0)
+    END FOR
+
+    FOR num=0 TO n:
+        count[num] = 1
+    END FOR
+
+    sorted_arr = []
+    FOR i=1 TO int_range
+        IF count[i] == 1
+            sorted_arr += i
+        END IF
+
+    RETURN sorted_arr
+
+
+arr = [5, 30, 7, 2, 80, 6, 1, 4]
+n = array lentgh arr
+k = 10
+int_range = k * n
+sorted_arr = sort_on(arr, k)
+print(k = {k} \n
+n = {n} \n
+int_range = (1,{int_range}) \n
+array={arr} \n
+sorted_array {sorted_arr})
